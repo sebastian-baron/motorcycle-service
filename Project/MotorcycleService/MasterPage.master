@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<%@ Register TagPrefix="MT" TagName="MetaTags" Src="~/Controls/MetaTags.ascx" %>
+<%@ Register TagPrefix="MT" TagName="FooterJs" Src="~/Controls/FooterJs.ascx" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<MT:MetaTags runat="server" ID="MetaTags" EnableViewState="false" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </form>
+<MT:FooterJs runat="server" ID="FooterJs" EnableViewState="false" />
+</body>
+</html>

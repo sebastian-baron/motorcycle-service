@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageDesk.master.cs" Inherits="Desk_MasterPageDesk" %>
+
+<!DOCTYPE html>
+<%@ Register TagPrefix="MT" TagName="MetaTags" Src="~/Controls/MetaTags.ascx" %>
+<%@ Register TagPrefix="MT" TagName="FooterJs" Src="~/Controls/FooterJs.ascx" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <MT:MetaTags runat="server" ID="MetaTags" EnableViewState="false" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/Desk">MT</a>
+                </div>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav navbar-right navbar-top-links">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i>admin <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="/Desk/ChangePassword.aspx"><i class="fa fa-gear fa-fw"></i>Zmień hasło</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/Desk/LogOut.aspx"><i class="fa fa-sign-out fa-fw"></i>Wyloguj się</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+
+                        <ul class="nav" id="side-menu">
+                            <li>
+                                <a href="/Desk/Vehicle.aspx"><i class="fa fa-motorcycle fa-fw"></i> Wszystkie pojazdy</a>
+                            </li>
+                            <li>
+                                <a href="/Desk/VehicleAdd.aspx"><i class="fa fa-plus fa-fw"></i> Dodaj nowy pojazd</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="page-wrapper">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">
+                                <asp:ContentPlaceHolder ID="cphTitle" runat="server"></asp:ContentPlaceHolder>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <asp:ContentPlaceHolder ID="cphContent" runat="server"></asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <MT:FooterJs runat="server" ID="FooterJs" EnableViewState="false" />
+    </form>
+</body>
+</html>

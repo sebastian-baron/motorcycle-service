@@ -1,0 +1,18 @@
+﻿.panel-headingTitle {padding:10px 15px;text-align:center;background:#f2f2f2;margin:10px 0 10px 0;}
+
+.tableVehicleInspectionAdd th {text-align:center;}
+.tableVehicleInspectionAdd input[type=checkbox], input[type=radio] {width:16px;height:16px;}
+.tableVehicleInspectionAdd label {width:100%;height:25px;display:block;}
+.inputVehicleInsAdd {padding:15px;font-size:14px;}
+
+.vehicleDetail h4 {font-size:13px;}
+.BtnEditVehicle {width:100%;clear:both;margin-top:15px;}
+
+.nav>li>a {color:#333;}
+.btnListVeh {margin:2px;}
+
+
+@media only screen and (max-width: 670px)
+{
+	.btnListVeh {margin:5px;}
+}
